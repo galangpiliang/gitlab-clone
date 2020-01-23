@@ -2,6 +2,9 @@
 :root {
     --main-bg-color: #f9f9f9;
     --shadow-color: rgba(0,0,0,0.1);
+    --black-color: #333;
+    --black-transparent-color: rgba(28,22,53,0.75);
+    --purple-color: #3f3177;
     --white-color: white;
     --white-tranparent-color: rgba(255,255,255,0.7);
     --white-light-transparent-color: rgba(216,216,216,0.15);
@@ -10,8 +13,9 @@
     --grey-light-color: #f2f2f2;
     --gradient-purple-color: linear-gradient(to top right, #1D1237, #523E8E);
 
-    --font-large-size: 4rem;
+    --font-large-size: 3.9rem;
     --font-medium-size: 1.5rem;
+    --font-normal-medium-size: 1.25rem;
     --font-normal-size: 1rem;
     --font-small-size: .5rem;
 
@@ -29,11 +33,18 @@ html, body {
     height: 100vh;
     background-color: var(--main-bg-color);
     font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.5;
+    color: var(--black-color);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+a {
+    text-decoration: none;
 }
 section {
-    padding: 0 5rem;
-    min-height: 39rem;
-    max-height: 45rem;
+    padding: 0 4rem;
 }
 /* End Global */
 
@@ -67,11 +78,12 @@ section {
     align-items: center;
     list-style-type: none;
     height: 100%;
+    justify-content: flex-end;   
 }
 .navbar .navbar-right ul li a:not(.right-side){
     color: var(--grey-color);
     /*  Harusnya gak ada padding top kalo ukurannya ngikutin parent  */
-    padding: 1rem;
+    padding: 1rem 1.25rem;
 }
 .navbar .navbar-right ul li a.right-side{
     padding: 1rem 10px;
@@ -88,7 +100,9 @@ section {
 .section-1{
     background: var(--gradient-purple-color); 
     height: 100vh;
-    padding-top: 7.5rem;
+    min-height: 38rem;
+    max-height: 39rem;
+    padding: 6.5rem 5rem;
     color: white;
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -100,11 +114,7 @@ section {
 }
 .section-1 p {
     font-size: var(--font-medium-size);
-    line-height: 1.5;
     max-width: 35rem;
-}
-.section-1 a {
-    text-decoration: none;
 }
 .section-1 a span{
     color: var(--white-tranparent-color);
@@ -113,7 +123,7 @@ section {
 }
 .section-1 a img {
     width: 15.7rem;
-    margin: 1rem;
+    margin: 2rem 2rem 1rem 2rem;
 }
 .section-1 .section-1-left{
     text-align: left;
@@ -121,7 +131,7 @@ section {
 .section-1 .bold-headline {
     font-size: var(--font-large-size);
     font-weight: 700;
-    margin: 2.3rem 0 0 0;
+    margin: 4rem 0 1rem 0;
 }
 .section-1 .button-container {
     margin-top: 2.5rem;
@@ -190,4 +200,88 @@ section {
     font-size: var(--font-medium-size);
     font-weight: 700;
 }
+.section-2 .card-group {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.9rem;
+}
+.section-2 .card-group .card {
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--white-color);
+    box-shadow: 0 .6rem 1.25rem var(--shadow-color);
+}
+.section-2 .card-group .card .card-image {
+    background: url(../images/data-servers.jpg) no-repeat center center / cover;
+    position: relative;
+    color: var(--white-color);
+    font-size: var(--font-medium-size);
+    font-weight: var(--font-large-weight);
+    padding-bottom: 56.25%;
+}
+.section-2 .card-group .card .card-image.speed {
+    background: url(../images/data.png) no-repeat center center / cover;
+}
+.section-2 .card-group .card .card-image.security {
+    background: url(../images/lock.jpg) no-repeat center center / cover;
+}
+.section-2 .card-group .card .card-image:before {
+    background: var(--black-transparent-color);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.section-2 .card-group .card .card-image .card-image-title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.section-2 .card-group .card .card-heading {
+    margin: 1.9rem 1.9rem 1.5rem;
+    font-size: var(--font-medium-size);
+}
+.section-2 .card-group .card .card-text {
+    font-size: 1.125rem;
+    margin: 0 1.9rem .9rem 1.9rem;
+}
+.section-2 .card-group .card .card-link {
+    margin: 0 1.9rem 1.9rem 1.9rem;
+}
+.section-2 .client-group {
+    margin-top: 6.25rem;
+}
+.section-2 .client-group .logos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1.25rem 3.12rem 4.4rem;
+}
+.section-2 .client-group p{
+    text-align: center;
+    color: var(--grey-color);
+    font-size: var(--font-normal-medium-size);
+}
+.logos a img {
+    height: 3.12rem;
+    max-width: 6.9rem;
+    padding: 1.25rem;
+    box-sizing: content-box;
+    opacity: .4;
+    transition: 0.2s cubic-bezier(0, 0, 0, 1);
+}
+.logos a img:hover {
+    opacity: 1;
+}
 /* End Section 2 */
+
+/* Section 3 */
+.section-3{
+    background: var(--purple-color);
+    color: var(--white-color);
+}
+/* End Section 3 */
