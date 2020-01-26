@@ -13,13 +13,13 @@
     --grey-light-color: #f2f2f2;
     --gradient-purple-color: linear-gradient(to top right, #1D1237, #523E8E);
 
-    --font-large-size: 3.9rem;
-    --font-medium-large-size: 2.12rem;
-    --font-medium-size: 1.5rem;
-    --font-normal-medium-size: 1.25rem;
-    --font-normal-size: 1.12rem;
-    --font-small-normal-size: 1rem;
-    --font-small-size: .5rem;
+    --font-large-size: 3.9rem; /* 62px */ 
+    --font-medium-large-size: 2.12rem; /* 34px */
+    --font-medium-size: 1.5rem; /* 24px */
+    --font-normal-medium-size: 1.25rem; /* 20px */
+    --font-normal-size: 1.12rem; /* 18px */
+    --font-small-normal-size: 1rem; /* 16px */ 
+    --font-small-size: .19rem; /* 8px */
     
     --font-large-weight: 700;
     --font-medium-weight: 600;
@@ -32,7 +32,7 @@
     margin: 0;
 }
 body {
-    height: 100vh;
+    width: 100vw;
     background-color: var(--main-bg-color);
     font-family: "Source Sans Pro", sans-serif;
     line-height: 1.5;
@@ -51,6 +51,10 @@ a {
 }
 section {
     padding: 0 4rem;
+    max-width: 100vw;
+}
+.font-bold {
+    font-weight: var(--font-medium-weight);
 }
 /* End Global */
 
@@ -149,13 +153,16 @@ section {
     border-width: 0;
     font-size: var(--font-normal-size);
     cursor: pointer;
+    color: var(--white-color);
 }
 .btn:hover {
     opacity: .9;
 }
 .primary {
     background-color: var(--orange-color);
-    color: var(--white-color);
+}
+.secondary {
+    background-color: var(--purple-color);
 }
 .light {
     background-color: var(--white-color);
@@ -175,7 +182,7 @@ section {
     display: block;
     right: 0;
     bottom: 0;
-    border-radius: 100% 0 0 0;*/
+    border-radius: 100% 0 0 0;
 }
 .circle:before {
     content: '';
@@ -313,3 +320,106 @@ section {
     color: var(--white-color);
 }
 /* End Section 3 */
+
+/* Section 4 */
+.section-4 .header-section-4{
+    padding: 3.12rem 0 5rem;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+.section-4 .header-section-4 h2{
+    margin: 1.7rem;
+    text-align: center;
+}
+.section-4 .header-section-4 p{
+    font-size: var(--font-medium-size);
+    text-align: center;
+}
+svg {
+    height: 44px;
+    fill: #548;
+}
+.table-container {
+    position: relative;
+    margin: 0 0 3.75rem 3.75rem;
+    text-align: center;
+    font-size: var(--font-small-size);
+}
+.table-container p {
+    margin: 0 0 .84rem;
+}
+.table-container .btn {
+    display: inline-block;
+    padding: .25rem 1.87rem;
+    font-size: var(--font-normal-size);
+    line-height: 2.5rem;
+    min-width: 8.75rem;
+    width: auto;
+    margin-top: 3.75rem;
+}
+.table-container .table-label {
+    position: absolute;
+    right: calc(100% + 1.25rem);
+    text-align: right;
+    color: var(--grey-color);
+}
+.table-container .single-application-label {
+    top: 19rem;
+}
+.table-container .separate-application-label {
+    bottom: 8rem;
+}
+.table-container .table::after {
+    content: "";
+    background: url("../images/rivals/gitlab-logo.svg") center center no-repeat;
+    /* what's this ? */
+    background-size: contain; 
+    position: absolute;
+    top: 8.12rem;
+    height: 60%;
+    width: 100%;
+    pointer-events: none;
+    opacity: .1;
+}
+.column-heading p {
+    margin: 0;
+}
+.table {
+    background-color: var(--white-color);
+    display: flex;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    width: 100%;
+}
+.column {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+.column:not(:last-child) {
+    border-right: 1px solid #e7e7e7;
+}
+.column .column-heading {
+    padding: 1.25rem;
+    border-bottom: 1px solid #e7e7e7;
+}
+.column .column-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 1.25rem .37rem;
+    padding-bottom: .37rem;
+}
+.column .column-footer{
+    height: 5.62rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.column .column-footer img{
+    max-width: 80%;
+    max-height: calc(100% - 40px);
+}
+/* End Section 4 */
