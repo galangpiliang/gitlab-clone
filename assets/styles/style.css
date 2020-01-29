@@ -4,6 +4,7 @@
     --shadow-color: rgba(0,0,0,0.1);
     --black-color: #333;
     --black-transparent-color: rgba(28,22,53,0.75);
+    --purple-light-color: #6b4fbb;
     --purple-color: #3f3177;
     --white-color: white;
     --white-tranparent-color: rgba(255,255,255,0.7);
@@ -50,6 +51,9 @@ h2 {
 }
 a {
     text-decoration: none;
+}
+ul {
+    list-style-type: none;
 }
 svg {
     height: 44px;
@@ -142,7 +146,6 @@ section {
     display: flex;
     margin: 0;
     align-items: center;
-    list-style-type: none;
     height: 100%;
     justify-content: flex-end;   
 }
@@ -479,6 +482,9 @@ section {
 /* End Section 5 */
 
 /* Section 6 */
+.section-6 {
+    padding-bottom: 2rem;
+}
 .section-6 h2{
     text-align: center;
     margin: 1.69rem 0 3.75rem;
@@ -502,3 +508,50 @@ section {
     color: var(--grey-color);
 }
 /* End Section 6 */
+
+/* Footer */
+footer {
+    background-color: var(--purple-light-color);
+    margin-top: 5rem;
+    font-size: var(--font-small-normal-size);
+    line-height: 1.5;
+}
+footer > div {
+    display: flex;
+    justify-content: center;
+}
+footer .gitlab-logo svg {
+    margin-top: -1.7rem;
+    margin-bottom: 1rem;
+}
+footer, footer a {
+    color: var(--white-color);
+}
+footer a {
+    padding-top: .5rem;
+    line-height: 2.3;
+}
+footer .social-logo a {
+    padding: .8rem;
+    font-size: var(--font-medium-size);
+}
+footer .links-group div {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+footer .links-group {
+    margin-bottom: 7rem;
+}
+footer .links-group h3 {
+    margin-bottom: 1rem;
+    font-size: var(--font-medium-size);
+}
+footer .contribute {
+    background-color: var(--purple-color);
+    padding: .5rem 1rem;
+}
+footer .contribute a {
+    text-decoration: underline;
+}
+/* End Footer */
