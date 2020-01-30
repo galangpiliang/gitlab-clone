@@ -12,8 +12,10 @@
     --orange-color: #fa7035;
     --grey-color: #828282;
     --grey-light-color: #f2f2f2;
+    --blue-color: #1b69b6;
+    --green-color: #12753a;
+    --green-light-color: #168f48;
     --gradient-purple-color: linear-gradient(to top right, #1D1237, #523E8E);
-
 
     --font-large-big-size: 14.5rem; /* 232px */ 
     --font-large-size: 3.9rem; /* 62px */ 
@@ -59,7 +61,7 @@ svg {
     height: 44px;
     fill: #548;
 }
-section {
+section, .container {
     padding: 0 4rem;
     max-width: 100vw;
 }
@@ -164,6 +166,10 @@ section {
     color: #548 !important;
 }
 /* End Header */
+
+/* 
+    HOME / ABOUT PAGE
+*/
 
 /* Section 1 */
 .section-1{
@@ -555,3 +561,143 @@ footer .contribute a {
     text-decoration: underline;
 }
 /* End Footer */
+
+/* 
+    END HOME / ABOUT PAGE
+*/
+
+/* 
+    REGISTER PAGE
+*/
+
+/* Main Section */
+.register, .register h2, .btn.green, strong {
+    font-size: var(--font-small-normal-size);
+}
+.register a {
+    color: var(--blue-color);
+}
+.register .gitlab-logo svg {
+    height: 5rem;
+    margin-top: 2.2rem;
+}
+.register .wrapper {
+    align-items: center;
+}
+.register .wrapper, .register-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.register .wrapper strong {
+    margin-bottom: .5rem;
+}
+.register .wrapper h2 {
+    margin: 1rem 0;
+}
+.register .register-box {
+    background-color: var(--white-color);
+    width: 90%;
+    max-width: 27rem;
+    min-width: 20rem;
+    border-radius: 0.25rem;
+    margin-bottom: .75rem;
+    padding: 1rem;
+}
+.register .register-box .btn.green {
+    background-color: var(--green-light-color);
+    border-color: var(--green-color);
+    padding: .5rem;
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
+}
+.register .register-box .crossing-line {
+    height: 3.12rem;
+    display: flex;
+    align-items: center;
+}
+.register .register-box .crossing-line::before, .crossing-line::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid var(--shadow-color);
+}
+.register .register-box .crossing-line::before {
+    margin-right: 1rem;
+}
+.register .register-box .crossing-line::after {
+    margin-left: 1rem;
+}
+.register .form-row {
+    display: flex;
+    margin: 0 -.3rem;
+}
+.register .form-row .form-group {
+    padding: 0 .3rem;
+}
+.register .form-group {
+    flex-basis: 0;
+    flex-grow: 1;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.register .form-group p {
+    color: var(--grey-color);
+}
+.register-box label {
+    margin-bottom: .5rem;
+    display: inline-block;
+    font-weight: var(--font-medium-weight);
+}
+.register-box input:not(.checkbox) {
+    width: 100%;
+    height: 2.125rem;
+    border: 1px solid var(--shadow-color);
+    border-radius: 4px;
+    display: block;
+    padding: .37rem .62rem;
+    font-size: var(--font-small-normal-size);
+}
+.social-login {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.social-button {
+    width: 48%;
+    box-shadow: 0 0 0 1px var(--shadow-color);
+    padding: .5rem;
+    margin: .5rem 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+.social-button img {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+.social-button span {
+    margin-left: .5rem;
+}
+/* End Main Section */
+
+/* Footer */
+footer.register {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    background-color: var(--white-color);
+    border-top: 1px solid var(--shadow-color);
+}
+footer .footer-links {
+    justify-content: flex-start;
+}
+footer .footer-links a {
+    margin-right: 1rem;
+    padding: 0;
+}
+/* End Footer */
+
+/* 
+    END REGISTER PAGE
+*/
