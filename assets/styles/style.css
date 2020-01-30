@@ -105,7 +105,7 @@ section, .container {
     width: 100%;
     height: 100%;
 }
-.card-group .card div:not(.card-image) {
+.card-group .card div:not(.card-image, .card-image-title) {
     margin: 0 1.9rem .9rem 1.9rem;
 }
 .card-group .card div.card-heading {
